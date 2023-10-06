@@ -142,6 +142,7 @@ ul.menu {
 #main .main-content {
   width: 80vw;
   height: 1200px;
+  padding: 16px;
 }
 
 /* loader */
@@ -188,6 +189,10 @@ ul.menu {
 
   #main .aside-left .container-buttons button {
     width: 50%;
+  }
+
+  #main .main-content {
+    padding: 0;
   }
 }
 
