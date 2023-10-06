@@ -1,3 +1,189 @@
-body {
-  background-color: red;
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  border: none;
+  background-color: transparent;
+}
+
+.header {
+  width: 100vw;
+  background-color: #F9E6B3;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.header img {
+  width: 60px;
+}
+
+.header nav {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.header nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+.header nav ul li button {
+  box-shadow: 3px 3px 4px;
+  transition: transform 400ms, box-shadow 400ms;
+}
+
+.header nav ul li button:active {
+  box-shadow: 2px 3px 1px;
+  transform: translate(4px, 6px);
+}
+
+.header nav ul li a {
+  padding: 10px;
+  border-radius: 6px;
+  color: #175EA8;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.header nav ul li a:hover {
+  background-color: #FFFFFF;
+}
+
+ul.menu ul {
+  position: absolute;
+  display: none;
+  box-shadow: 3px 3px 2px #333;
+}
+
+ul.menu {
+  float: left;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 15px;
+  border-radius: 5px;
+  padding: 0 5px;
+}
+
+.menu li {
+  float: left;
+  width: auto;
+  position: relative;
+}
+
+.menu li a {
+  display: block;
+  padding: 0 20px;
+  line-height: 45px;
+  height: 45px;
+  float: left;
+  transition: all 0.1s linear;
+}
+
+.menu li:hover>ul.submenu {
+  display: block;
+  top: 64px;
+  left: 0;
+  padding: 5px;
+  width: 200px;
+  border-radius: 0 0 5px 5px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.menu li:hover>ul.submenu li {
+  margin-bottom: 6px;
+}
+
+.menu li:hover>ul.submenu li,
+.menu li:hover>ul.submenu a {
+  width: 90%;
+}
+
+.menu li:hover>ul.submenu a {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* main */
+#main {
+  display: flex;
+}
+
+#main .aside-left {
+  width: 20vw;
+  height: 1200px;
+}
+
+#main .aside-left .container-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+#main .main-content {
+  width: 80vw;
+  height: 1200px;
+}
+
+/* loader */
+
+.loader {
+  width: 48px; /* define a largura do elemento */
+  height: 48px; /* define a altura do elemento */
+  border: 5px solid #FFF; /* define uma borda para o elemento */
+  border-bottom-color: #175EA8; /* define a cor da borda */
+  border-radius: 50%; /* deixa a borda circular */
+  display: inline-block; /* basicamente e um elemento definido como  bloco so que permite definir altura e largura */
+  box-sizing: border-box; /* propriedade para calcular o tamanho total do elemento considerando a borda e do padding */
+  animation: rotation 1s linear infinite; /* define uma animação rotation para o elemento */
+}
+
+/* definicação da animação que basicamente adiciona uma rotação para o elemento que fica girando no eixo de 360 graus */
+@keyframes rotation {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+} 
+
+@media (max-width: 600px) {
+  #main {
+    flex-direction: column;
+  }
+
+  #main .aside-left {
+    width: 100vw;
+    height: auto;
+  }
+
+  #main .main-content {
+    width: 100vw;
+    height: auto;
+  }
+}
+
+@media (max-width: 562px) {
+  .header nav ul li a {
+    padding: 0;
+  }
+
+  .ul.menu {
+    padding: 0;
+  }
+
+  .menu li:hover>ul.submenu a {
+    font-size: 14px;
+    font-weight: normal;
+  }
+
+  .header nav ul {
+    gap: 4px;
+  }
+
+  .header {
+    padding: 4px;
+  }
 }
