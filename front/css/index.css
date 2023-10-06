@@ -114,11 +114,29 @@ ul.menu {
 #main .aside-left {
   width: 20vw;
   height: 1200px;
+  border-right: 1px solid #175EA8;
 }
 
 #main .aside-left .container-buttons {
   display: flex;
   flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  margin: 16pxp;
+  padding: 10px;
+}
+
+#main .aside-left .container-buttons button {
+  border: 1px solid #175EA8;
+  padding: 20px;
+  width: 90%;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+#main .aside-left .container-buttons button:hover {
+  background-color: #175EA8;
+  color: #fff;
 }
 
 #main .main-content {
@@ -162,6 +180,14 @@ ul.menu {
   #main .main-content {
     width: 100vw;
     height: auto;
+  }
+
+  #main .aside-left {
+    border: none;
+  }
+
+  #main .aside-left .container-buttons button {
+    width: 50%;
   }
 }
 
